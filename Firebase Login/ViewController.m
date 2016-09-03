@@ -40,6 +40,9 @@
     // Sign In with credentials.
     NSString *email = _emailField.text;
     NSString *password = _passwordField.text;
+    
+    if (email && password)
+    {
     [[FIRAuth auth] signInWithEmail:email
                            password:password
                          completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
@@ -49,6 +52,11 @@
                              }
                              [self signedIn:user animated: true];
                          }];
+    }
+    else
+    {
+        return;
+    }
 }
 
 - (IBAction)didTapSignUp:(id)sender {
