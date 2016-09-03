@@ -47,6 +47,11 @@
                            password:password
                          completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
                              if (error) {
+                                 NSString *errorCode = error.localizedDescription;
+                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
+                                                                                 message:errorCode
+                                                                                delegate:self cancelButtonTitle:@"Try again!" otherButtonTitles:nil, nil];
+                                 [alert show];
                                  NSLog(@"%@", error.localizedDescription);
                                  return;
                              }
