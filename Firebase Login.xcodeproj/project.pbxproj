@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8C60855E1D7ABC19004CD4C4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C60855D1D7ABC19004CD4C4 /* MainViewController.m */; };
 		8C6085611D7AC0DB004CD4C4 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6085601D7AC0DB004CD4C4 /* Helper.m */; };
+		8C6085641D7ADC9A004CD4C4 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6085631D7ADC9A004CD4C4 /* SignUpViewController.m */; };
 		8C7BE48C1D7954270066586B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7BE48B1D7954270066586B /* main.m */; };
 		8C7BE48F1D7954270066586B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7BE48E1D7954270066586B /* AppDelegate.m */; };
 		8C7BE4921D7954270066586B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7BE4911D7954270066586B /* ViewController.m */; };
@@ -27,6 +28,8 @@
 		8C60855D1D7ABC19004CD4C4 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		8C60855F1D7AC0DB004CD4C4 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		8C6085601D7AC0DB004CD4C4 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		8C6085621D7ADC9A004CD4C4 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		8C6085631D7ADC9A004CD4C4 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		8C7BE4871D7954270066586B /* Firebase Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7BE48B1D7954270066586B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C7BE48D1D7954270066586B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +65,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8C6085651D7AE2E3004CD4C4 /* CustomTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomTableViewCells;
+			sourceTree = "<group>";
+		};
 		8C7BE47E1D7954260066586B = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		8C7BE4891D7954270066586B /* Firebase Login */ = {
 			isa = PBXGroup;
 			children = (
+				8C6085651D7AE2E3004CD4C4 /* CustomTableViewCells */,
 				8C7BE48D1D7954270066586B /* AppDelegate.h */,
 				8C7BE48E1D7954270066586B /* AppDelegate.m */,
 				8C7BE4901D7954270066586B /* ViewController.h */,
@@ -98,6 +109,8 @@
 				8C7BE48A1D7954270066586B /* Supporting Files */,
 				8C60855F1D7AC0DB004CD4C4 /* Helper.h */,
 				8C6085601D7AC0DB004CD4C4 /* Helper.m */,
+				8C6085621D7ADC9A004CD4C4 /* SignUpViewController.h */,
+				8C6085631D7ADC9A004CD4C4 /* SignUpViewController.m */,
 			);
 			path = "Firebase Login";
 			sourceTree = "<group>";
@@ -244,6 +257,7 @@
 			files = (
 				8C7BE4921D7954270066586B /* ViewController.m in Sources */,
 				8C7BE48F1D7954270066586B /* AppDelegate.m in Sources */,
+				8C6085641D7ADC9A004CD4C4 /* SignUpViewController.m in Sources */,
 				8C7BE48C1D7954270066586B /* main.m in Sources */,
 				8C60855E1D7ABC19004CD4C4 /* MainViewController.m in Sources */,
 				8C6085611D7AC0DB004CD4C4 /* Helper.m in Sources */,
