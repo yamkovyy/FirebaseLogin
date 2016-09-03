@@ -12,5 +12,7 @@
 @interface Helper : NSObject
 
 +(UIViewController*)loadVCWithIdentifier:(NSString*)identifier;
++(void)showAlerIn:(UIViewController*)vc title:(NSString*)title message:(NSString*)message;
++(BOOL)isValidEmail:(NSString *)checkString;
 
 @end

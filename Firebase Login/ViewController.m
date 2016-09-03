@@ -40,56 +40,23 @@
     // Sign In with credentials.
     NSString *email = _emailField.text;
     NSString *password = _passwordField.text;
+    __weak typeof(self) weakSelf = self;
     
-    if (email && password)
-    {
     [[FIRAuth auth] signInWithEmail:email
                            password:password
                          completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
-                             if (error) {
-                                 NSString *errorCode = error.localizedDescription;
-                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning"
-                                                                                 message:errorCode
-                                                                                delegate:self cancelButtonTitle:@"Try again!" otherButtonTitles:nil, nil];
-                                 [alert show];
-                                 NSLog(@"%@", error.localizedDescription);
-                                 return;
-                             }
-                             [self signedIn:user animated: true];
-                         }];
-    }
-    else
-    {
-        return;
-    }
-}
-
-- (IBAction)didTapSignUp:(id)sender {
-    NSString *email = _emailField.text;
-    NSString *password = _passwordField.text;
-    [[FIRAuth auth] createUserWithEmail:email
-                               password:password
-                             completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+                             typeof(weakSelf) strongSelf = weakSelf;
+                             
+                             if (strongSelf)
+                             {
                                  if (error) {
                                      NSLog(@"%@", error.localizedDescription);
+                                     [Helper showAlerIn: strongSelf title: @"Error" message: error.localizedDescription];
                                      return;
                                  }
-                                 [self setDisplayName:user];
-                             }];
-}
-
-- (void)setDisplayName:(FIRUser *)user {
-    FIRUserProfileChangeRequest *changeRequest =
-    [user profileChangeRequest];
-    // Use first part of email as the default display name
-    changeRequest.displayName = [[user.email componentsSeparatedByString:@"@"] objectAtIndex:0];
-    [changeRequest commitChangesWithCompletion:^(NSError *_Nullable error) {
-        if (error) {
-            NSLog(@"%@", error.localizedDescription);
-            return;
-        }
-        [self signedIn:user animated: true];
-    }];
+                                  [self signedIn:user animated: true];
+                             }
+                         }];
 }
 
 - (IBAction)didRequestPasswordReset:(id)sender
