@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.h
+//  TextFieldTVC.h
 //  Firebase Login
 //
 //  Created by viera on 9/3/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignUpViewController : UIViewController
+@interface TextFieldTVC : UITableViewCell
 
-
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 @end

@@ -10,6 +10,7 @@
 #import <FirebaseAuth/FirebaseAuth.h>
 #import "MainViewController.h"
 #import "Helper.h"
+#import "SignUpViewController.h"
 @import Firebase;
 
 @interface ViewController ()
@@ -36,7 +37,8 @@
     [self.navigationController setNavigationBarHidden: true];
 }
 
-- (IBAction)didTapSignIn:(id)sender {
+- (IBAction)didTapSignIn:(id)sender
+{
     // Sign In with credentials.
     NSString *email = _emailField.text;
     NSString *password = _passwordField.text;
@@ -57,6 +59,11 @@
                                   [self signedIn:user animated: true];
                              }
                          }];
+}
+
+- (IBAction)didTapSignUp:(id)sender
+{
+    [self.navigationController pushViewController: [Helper loadVCWithIdentifier: NSStringFromClass([SignUpViewController class])] animated: true];
 }
 
 - (IBAction)didRequestPasswordReset:(id)sender

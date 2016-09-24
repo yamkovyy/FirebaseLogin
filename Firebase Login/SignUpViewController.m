@@ -10,8 +10,13 @@
 #import <FirebaseAuth/FirebaseAuth.h>
 #import "Helper.h"
 #import "MainViewController.h"
+#import "TextFieldTVC.h"
+#import "ButtonTVC.h"
 
-@interface SignUpViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface SignUpViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+{
+    NSString *test;
+}
 
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *password;
@@ -27,6 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.tableView registerNib: [UINib nibWithNibName:@"TextFieldTVC" bundle:nil] forCellReuseIdentifier: NSStringFromClass([TextFieldTVC class])];
+    [self.tableView registerNib: [UINib nibWithNibName:@"ButtonTVC" bundle:nil] forCellReuseIdentifier: NSStringFromClass([ButtonTVC class])];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -36,7 +44,7 @@
     [self.navigationController setNavigationBarHidden: false];
 }
 
-- (IBAction)didTapSignUp:(id)sender
+- (void)didTapSignUp:(id)sender
 {
     if ([self isEmailAndPasswordValid])
     {
@@ -131,12 +139,66 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 5;
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *returnCell = nil;
+    
+    switch (indexPath.row)
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        {
+            TextFieldTVC *cell = [tableView dequeueReusableCellWithIdentifier: NSStringFromClass([TextFieldTVC class])];
+            cell.textField.tag = indexPath.row;
+            cell.textField.delegate = self;
+            returnCell = cell;
+            break;
+        }
+        case 4:
+        {
+            ButtonTVC *cell = [tableView dequeueReusableCellWithIdentifier: NSStringFromClass([ButtonTVC class])];
+            returnCell = cell;
+            break;
+        }
+        default:
+            break;
+    }
+    
+    return returnCell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    float height = 0;
+    
+    switch (indexPath.row)
+    {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+            height = 44;
+            break;
+        case 4:
+            height = 50;
+            break;
+        default:
+            break;
+    }
+    
+    return 50;
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
 
 @end

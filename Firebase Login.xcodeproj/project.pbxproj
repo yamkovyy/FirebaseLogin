@@ -10,6 +10,10 @@
 		8C60855E1D7ABC19004CD4C4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C60855D1D7ABC19004CD4C4 /* MainViewController.m */; };
 		8C6085611D7AC0DB004CD4C4 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6085601D7AC0DB004CD4C4 /* Helper.m */; };
 		8C6085641D7ADC9A004CD4C4 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6085631D7ADC9A004CD4C4 /* SignUpViewController.m */; };
+		8C6085691D7AEDE0004CD4C4 /* TextFieldTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6085671D7AEDE0004CD4C4 /* TextFieldTVC.m */; };
+		8C60856A1D7AEDE0004CD4C4 /* TextFieldTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6085681D7AEDE0004CD4C4 /* TextFieldTVC.xib */; };
+		8C60856E1D7AEE25004CD4C4 /* ButtonTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C60856C1D7AEE25004CD4C4 /* ButtonTVC.m */; };
+		8C60856F1D7AEE25004CD4C4 /* ButtonTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C60856D1D7AEE25004CD4C4 /* ButtonTVC.xib */; };
 		8C7BE48C1D7954270066586B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7BE48B1D7954270066586B /* main.m */; };
 		8C7BE48F1D7954270066586B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7BE48E1D7954270066586B /* AppDelegate.m */; };
 		8C7BE4921D7954270066586B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7BE4911D7954270066586B /* ViewController.m */; };
@@ -30,6 +34,12 @@
 		8C6085601D7AC0DB004CD4C4 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		8C6085621D7ADC9A004CD4C4 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		8C6085631D7ADC9A004CD4C4 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		8C6085661D7AEDE0004CD4C4 /* TextFieldTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFieldTVC.h; path = CustomTableViewCells/TextFieldTVC.h; sourceTree = "<group>"; };
+		8C6085671D7AEDE0004CD4C4 /* TextFieldTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFieldTVC.m; path = CustomTableViewCells/TextFieldTVC.m; sourceTree = "<group>"; };
+		8C6085681D7AEDE0004CD4C4 /* TextFieldTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextFieldTVC.xib; path = CustomTableViewCells/TextFieldTVC.xib; sourceTree = "<group>"; };
+		8C60856B1D7AEE25004CD4C4 /* ButtonTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ButtonTVC.h; path = CustomTableViewCells/ButtonTVC.h; sourceTree = "<group>"; };
+		8C60856C1D7AEE25004CD4C4 /* ButtonTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ButtonTVC.m; path = CustomTableViewCells/ButtonTVC.m; sourceTree = "<group>"; };
+		8C60856D1D7AEE25004CD4C4 /* ButtonTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ButtonTVC.xib; path = CustomTableViewCells/ButtonTVC.xib; sourceTree = "<group>"; };
 		8C7BE4871D7954270066586B /* Firebase Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7BE48B1D7954270066586B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C7BE48D1D7954270066586B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +52,8 @@
 		8C7BE49B1D7954270066586B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C7BE4A11D79549B0066586B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8C7BE4A31D7956810066586B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CC44D141D9166D100AD81FF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		8CC44D161D916B8B00AD81FF /* Firebase Login.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Firebase Login.entitlements"; sourceTree = "<group>"; };
 		F7A8B786DB7080AAC0621D81 /* Pods_Firebase_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,6 +72,7 @@
 		04A1A208D57C11C2F8D9D37C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CC44D141D9166D100AD81FF /* UserNotifications.framework */,
 				F7A8B786DB7080AAC0621D81 /* Pods_Firebase_Login.framework */,
 			);
 			name = Frameworks;
@@ -68,6 +81,12 @@
 		8C6085651D7AE2E3004CD4C4 /* CustomTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				8C6085661D7AEDE0004CD4C4 /* TextFieldTVC.h */,
+				8C6085671D7AEDE0004CD4C4 /* TextFieldTVC.m */,
+				8C6085681D7AEDE0004CD4C4 /* TextFieldTVC.xib */,
+				8C60856B1D7AEE25004CD4C4 /* ButtonTVC.h */,
+				8C60856C1D7AEE25004CD4C4 /* ButtonTVC.m */,
+				8C60856D1D7AEE25004CD4C4 /* ButtonTVC.xib */,
 			);
 			name = CustomTableViewCells;
 			sourceTree = "<group>";
@@ -94,6 +113,7 @@
 		8C7BE4891D7954270066586B /* Firebase Login */ = {
 			isa = PBXGroup;
 			children = (
+				8CC44D161D916B8B00AD81FF /* Firebase Login.entitlements */,
 				8C6085651D7AE2E3004CD4C4 /* CustomTableViewCells */,
 				8C7BE48D1D7954270066586B /* AppDelegate.h */,
 				8C7BE48E1D7954270066586B /* AppDelegate.m */,
@@ -166,6 +186,15 @@
 				TargetAttributes = {
 					8C7BE4861D7954260066586B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = EG6G8QKR4H;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -195,8 +224,10 @@
 				8C7BE49A1D7954270066586B /* LaunchScreen.storyboard in Resources */,
 				8C7BE4971D7954270066586B /* Assets.xcassets in Resources */,
 				8C7BE4A41D7956810066586B /* GoogleService-Info.plist in Resources */,
+				8C60856F1D7AEE25004CD4C4 /* ButtonTVC.xib in Resources */,
 				8C7BE4A21D79549B0066586B /* Podfile in Resources */,
 				8C7BE4951D7954270066586B /* Main.storyboard in Resources */,
+				8C60856A1D7AEDE0004CD4C4 /* TextFieldTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,10 +288,12 @@
 			files = (
 				8C7BE4921D7954270066586B /* ViewController.m in Sources */,
 				8C7BE48F1D7954270066586B /* AppDelegate.m in Sources */,
+				8C6085691D7AEDE0004CD4C4 /* TextFieldTVC.m in Sources */,
 				8C6085641D7ADC9A004CD4C4 /* SignUpViewController.m in Sources */,
 				8C7BE48C1D7954270066586B /* main.m in Sources */,
 				8C60855E1D7ABC19004CD4C4 /* MainViewController.m in Sources */,
 				8C6085611D7AC0DB004CD4C4 /* Helper.m in Sources */,
+				8C60856E1D7AEE25004CD4C4 /* ButtonTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +406,10 @@
 			baseConfigurationReference = 2C4342AD6C5D30FD52CCD76E /* Pods-Firebase Login.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Firebase Login/Firebase Login.entitlements";
+				DEVELOPMENT_TEAM = EG6G8QKR4H;
 				INFOPLIST_FILE = "Firebase Login/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vydeveloping.firebaseTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,7 +421,10 @@
 			baseConfigurationReference = 4F92A8CF888BAD32B646542F /* Pods-Firebase Login.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Firebase Login/Firebase Login.entitlements";
+				DEVELOPMENT_TEAM = EG6G8QKR4H;
 				INFOPLIST_FILE = "Firebase Login/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vydeveloping.firebaseTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

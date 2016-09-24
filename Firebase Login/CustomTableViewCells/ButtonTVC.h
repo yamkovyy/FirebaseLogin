@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.h
+//  ButtonTVC.h
 //  Firebase Login
 //
 //  Created by viera on 9/3/16.
@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignUpViewController : UIViewController
+@interface ButtonTVC : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
