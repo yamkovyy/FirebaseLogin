@@ -37,11 +37,16 @@
     [self.navigationController setNavigationBarHidden: true];
 }
 
-- (IBAction)didTapSignIn:(id)sender
-{
+
+- (IBAction)didTapSignIn:(id)sender {
+    
+    
     // Sign In with credentials.
     NSString *email = _emailField.text;
     NSString *password = _passwordField.text;
+    
+    if ([self isEmailAndPasswordValid])
+    {
     __weak typeof(self) weakSelf = self;
     
     [[FIRAuth auth] signInWithEmail:email
@@ -59,11 +64,42 @@
                                   [self signedIn:user animated: true];
                              }
                          }];
+    }
 }
 
-- (IBAction)didTapSignUp:(id)sender
+- (BOOL)isEmailAndPasswordValid
 {
-    [self.navigationController pushViewController: [Helper loadVCWithIdentifier: NSStringFromClass([SignUpViewController class])] animated: true];
+    BOOL valid = true;
+    NSString *title;
+    NSString *message;
+    NSString *email = _emailField.text;
+    NSString *password = _passwordField.text;
+    
+    if (email.length == 0)
+    {
+        title = @"Empty Email";
+        message = @"Email field cannot be empty.";
+        valid = false;
+    }
+    else if (password.length == 0)
+    {
+        title = @"Empty Password";
+        message = @"Password field cannot be empty.";
+        valid = false;
+    }
+    else if (![Helper isValidEmail: email])
+    {
+        title = @"Wrong Email Format";
+        message = @"Please enter valid email adress.";
+        valid = false;
+    }
+    
+    if (!valid)
+    {
+        [Helper showAlerIn: self title: title message: message];
+    }
+    
+    return valid;
 }
 
 - (IBAction)didRequestPasswordReset:(id)sender
